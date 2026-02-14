@@ -1,0 +1,39 @@
+{
+  "name": "placement-cell",
+  "version": "1.0.0",
+  "description": "placement cell app skill test 1 by coding ninja ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sahil-Sayyad/Placement_Cell.git"
+  },
+  "keywords": [
+    "placementcellapp"
+  ],
+  "author": "Sahil Sayyad",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sahil-Sayyad/Placement_Cell/issues"
+  },
+  "homepage": "https://github.com/Sahil-Sayyad/Placement_Cell#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fast-csv": "^4.3.6",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.4.0",
+    "morgan": "^1.10.0",
+    "multer": "^2.0.2",
+    "node-fetch": "^3.3.2",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1"
+  }
+}
