@@ -1,61 +1,168 @@
 # Student Placement Tracking Portal
 
-A Spring Boot + React portal for managing campus placement workflows. It includes admin and student login, company management, job postings, applications, and status tracking from pending to hired.
+A full-stack campus recruitment management system built with Spring Boot, React, and MySQL/MariaDB.
+
+This project helps colleges manage the complete placement workflow:
+
+1. Admin manages companies and job drives.
+2. Students view eligible drives and apply.
+3. Admin tracks applications and updates status (PENDING, SHORTLISTED, HIRED, REJECTED).
+4. Students track application outcomes from their dashboard.
+
+## Why this project
+
+Placement operations are often handled in spreadsheets and manual communication. This portal centralizes everything in one system with role-based access and status visibility.
+
+## Tech Stack
+
+### Frontend
+
+- React 18
+- Vite
+- React Router
+- Axios
+- Tailwind CSS
+- Lucide Icons
+
+### Backend
+
+- Java 17+
+- Spring Boot 3
+- Spring Security + JWT
+- Spring Data JPA (Hibernate)
+
+### Database
+
+- MySQL / MariaDB
+
+## Core Features
+
+### Authentication and Security
+
+- JWT-based login
+- Role-based authorization for Admin and Student
+- Protected API routes and frontend routes
+
+### Admin Module
+
+- View dashboard analytics
+- Manage companies
+- Create and manage job postings
+- Review student applications
+- Update application status
+
+### Student Module
+
+- View personal dashboard
+- Manage profile
+- Browse job openings
+- Apply for jobs
+- Track application statuses
+
+## Application Screenshots
+
+### Login Page
+
+![Login Page](docs/screenshots/login-page.png)
+
+### Admin Dashboard
+
+![Admin Dashboard](docs/screenshots/admin-dashboard.png)
+
+### Student Dashboard
+
+![Student Dashboard](docs/screenshots/student-dashboard.png)
+
+### Student Applications
+
+![Student Applications](docs/screenshots/student-applications.png)
 
 ## Demo Accounts
 
-| Role    | Email              | Password    |
-| ------- | ------------------ | ----------- |
-| Admin   | admin@portal.com   | admin123    |
+| Role | Email | Password |
+| --- | --- | --- |
+| Admin | admin@portal.com | admin123 |
 | Student | student@portal.com | password123 |
 
-## What the demo shows
+## Demo Workflow (College Presentation)
 
-1. Admin creates a company.
-2. Admin posts a job drive.
-3. Student applies.
-4. Admin shortlists or hires the student.
-5. Student sees the updated status in My Applications.
+Use this exact flow during viva/demo:
 
-## Local Run
+1. Login as Admin and show dashboard stats.
+2. Show companies and job postings.
+3. Login as Student and show available jobs.
+4. Show student application tracking page.
+5. Switch back to Admin and change status to SHORTLISTED/HIRED.
+6. Re-login as Student and show updated status.
 
-Use the bundled scripts from the project root:
+## Project Structure
+
+```text
+Student_Placement_Tracking_Portal/
+	backend/                 Spring Boot APIs, Security, JPA entities
+	frontend/                React client application
+	docs/screenshots/        README screenshots
+	schema.sql               Base database schema
+	demo_seed.sql            Demo-ready seed data
+	run_db.bat               Start local MariaDB (port 3307)
+	run_backend.bat          Start backend
+	run_frontend.bat         Start frontend
+```
+
+## Local Setup and Run
+
+### One-click run (recommended)
 
 1. Run [run_db.bat](run_db.bat)
 2. Run [run_backend.bat](run_backend.bat)
 3. Run [run_frontend.bat](run_frontend.bat)
 4. Open http://localhost:5173
 
-If you want the built-in demo data, import [schema.sql](schema.sql) first and then run [demo_seed.sql](demo_seed.sql).
+### Load demo data
 
-## Deployment Environment Variables
+1. Import [schema.sql](schema.sql)
+2. Import [demo_seed.sql](demo_seed.sql)
 
-Backend:
+## Deployment (Render + Vercel)
 
-- `SPRING_DATASOURCE_URL` - Cloud MySQL URL
-- `SPRING_DATASOURCE_USERNAME` - Database username
-- `SPRING_DATASOURCE_PASSWORD` - Database password
-- `APP_CORS_ALLOWED_ORIGINS` - Frontend URL(s), comma-separated
-- `PORT` - Backend port if your host provides one
+Detailed guide: [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)
 
-Frontend:
+### Backend Environment Variables
 
-- `VITE_API_BASE_URL` - Backend API URL, for example `https://your-backend.onrender.com/api`
+- `SPRING_DATASOURCE_URL`
+- `SPRING_DATASOURCE_USERNAME`
+- `SPRING_DATASOURCE_PASSWORD`
+- `APP_CORS_ALLOWED_ORIGINS`
+- `PORT`
 
-## GitHub Push
+### Frontend Environment Variables
 
-1. Create a new GitHub repository named something like `Student-Placement-Tracking-Portal`.
-2. From the project root, run:
+- `VITE_API_BASE_URL` (example: `https://your-backend.onrender.com/api`)
 
-```bash
-git init
-git add .
-git commit -m "feat: prepare placement portal for github and deployment"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/Student-Placement-Tracking-Portal.git
-git push -u origin main
-```
+## API Snapshot
 
-3. Make sure the root `.gitignore` keeps `node_modules`, `target`, `dist`, and local database data out of Git.
+Representative endpoints:
 
-If you need deployment guidance, see [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md).
+- `POST /api/auth/login`
+- `POST /api/auth/signup`
+- `GET /api/admin/dashboard-stats`
+- `POST /api/admin/companies`
+- `GET /api/admin/companies`
+- `GET /api/student/profile/{userId}`
+- `GET /api/applications/student/{userId}`
+- `POST /api/applications/apply?userId={id}&jobId={id}`
+- `PATCH /api/applications/{id}/status?status=SHORTLISTED|HIRED|REJECTED`
+
+## Author Notes
+
+This repository is prepared for:
+
+- Academic project demonstration
+- End-to-end workflow presentation
+- GitHub portfolio showcase
+
+If you want, you can further enhance this by adding:
+
+1. Public demo links (Render/Vercel)
+2. ER diagram and architecture diagram
+3. API collection export (Postman)
