@@ -58,6 +58,7 @@ Placement operations are often handled in spreadsheets and manual communication.
 - Browse job openings
 - Apply for jobs
 - Track application statuses
+- Access a dedicated support center for help and issue reporting
 
 ## Application Screenshots
 
@@ -77,11 +78,19 @@ Placement operations are often handled in spreadsheets and manual communication.
 
 ![Student Applications](docs/screenshots/student-applications.png)
 
+### Admin Support Center
+
+![Admin Support Center](docs/screenshots/admin-support.png)
+
+### Student Support Center
+
+![Student Support Center](docs/screenshots/student-support.png)
+
 ## Demo Accounts
 
-| Role | Email | Password |
-| --- | --- | --- |
-| Admin | admin@portal.com | admin123 |
+| Role    | Email              | Password    |
+| ------- | ------------------ | ----------- |
+| Admin   | admin@portal.com   | admin123    |
 | Student | student@portal.com | password123 |
 
 ## Demo Workflow (College Presentation)

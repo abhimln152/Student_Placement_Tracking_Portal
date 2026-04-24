@@ -12,6 +12,7 @@ import StudentDashboard from './pages/student/StudentDashboard';
 import StudentProfile from './pages/student/StudentProfile';
 import StudentJobs from './pages/student/StudentJobs';
 import StudentApplications from './pages/student/StudentApplications';
+import Support from './pages/Support';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -40,6 +41,7 @@ function App() {
                   <Route path="profile" element={<StudentProfile />} />
                   <Route path="jobs" element={<StudentJobs />} />
                   <Route path="applications" element={<StudentApplications />} />
+                  <Route path="support" element={<Support />} />
                 </Routes>
               </ProtectedRoute>
             } />
@@ -53,6 +55,7 @@ function App() {
                   <Route path="companies" element={<AdminCompanies />} />
                   <Route path="jobs" element={<AdminJobs />} />
                   <Route path="applications" element={<AdminApplications />} />
+                  <Route path="support" element={<Support />} />
                 </Routes>
               </ProtectedRoute>
             } />

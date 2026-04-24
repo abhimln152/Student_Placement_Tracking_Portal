@@ -6,6 +6,7 @@ import {
   UserCircle, 
   Briefcase, 
   FileText, 
+  CircleHelp,
   LogOut, 
   Users,
   Building
@@ -25,6 +26,7 @@ const Sidebar = () => {
     { name: 'My Profile', path: '/student/profile', icon: UserCircle },
     { name: 'Job Openings', path: '/student/jobs', icon: Briefcase },
     { name: 'My Applications', path: '/student/applications', icon: FileText },
+    { name: 'Support', path: '/student/support', icon: CircleHelp },
   ];
 
   const adminLinks = [
@@ -33,6 +35,7 @@ const Sidebar = () => {
     { name: 'Manage Companies', path: '/admin/companies', icon: Building }, // We will add companies view
     { name: 'Job Postings', path: '/admin/jobs', icon: Briefcase },
     { name: 'Applications', path: '/admin/applications', icon: FileText },
+    { name: 'Support', path: '/admin/support', icon: CircleHelp },
   ];
 
   const links = user?.role === 'ADMIN' ? adminLinks : studentLinks;
