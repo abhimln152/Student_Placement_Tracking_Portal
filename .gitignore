@@ -1,0 +1,48 @@
+# Node.js / Frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+.env.*
+.eslintcache
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Java / Backend (Maven)
+target/
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+
+# Database (MariaDB/MySQL)
+mariadb/data/
+*.sql.gz
+
+# Bundled local runtimes (keep local only, do not push)
+node/
+maven/
+mariadb/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.project
+.classpath
+.settings/
+.nb-gradle/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
