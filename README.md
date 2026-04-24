@@ -78,10 +78,6 @@ Placement operations are often handled in spreadsheets and manual communication.
 
 ![Student Applications](docs/screenshots/student-applications.png)
 
-### Admin Support Center
-
-![Admin Support Center](docs/screenshots/admin-support.png)
-
 ### Student Support Center
 
 ![Student Support Center](docs/screenshots/student-support.png)

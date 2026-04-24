@@ -35,7 +35,6 @@ const Sidebar = () => {
     { name: 'Manage Companies', path: '/admin/companies', icon: Building }, // We will add companies view
     { name: 'Job Postings', path: '/admin/jobs', icon: Briefcase },
     { name: 'Applications', path: '/admin/applications', icon: FileText },
-    { name: 'Support', path: '/admin/support', icon: CircleHelp },
   ];
 
   const links = user?.role === 'ADMIN' ? adminLinks : studentLinks;

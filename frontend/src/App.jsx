@@ -55,7 +55,6 @@ function App() {
                   <Route path="companies" element={<AdminCompanies />} />
                   <Route path="jobs" element={<AdminJobs />} />
                   <Route path="applications" element={<AdminApplications />} />
-                  <Route path="support" element={<Support />} />
                 </Routes>
               </ProtectedRoute>
             } />
